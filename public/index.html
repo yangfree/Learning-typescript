@@ -10,55 +10,55 @@
   <body>
     <div class="main">
       <h1 class="page-title">Websocket小应用 | 多人聊天室</h1>
-      <div class="login-box" style="display: none;">
+      <div class="login-box" id="loginBox" style="display: block;">
         <div class="header">
-          <input type="text" placeholder="请输入你的名称" />
+          <input type="text" placeholder="请输入你的名称" id="username"/>
         </div>
         <div class="body">
-          <ul>
+          <ul id="loginPhotos">
             <li>
-              <img src="./images/boy_2.jpg" alt="" />
-            </li>
-            <li class="actived">
-              <img src="./images/boy_3.jpg" alt="" />
+              <img src="images/boy_2.jpg" alt="" />
             </li>
             <li>
-              <img src="./images/boy_4.jpg" alt="" />
+              <img src="images/boy_3.jpg" alt="" />
             </li>
             <li>
-              <img src="./images/boy_5.jpg" alt="" />
+              <img src="images/boy_4.jpg" alt="" />
             </li>
             <li>
-              <img src="./images/boy_6.jpg" alt="" />
+              <img src="images/boy_5.jpg" alt="" />
             </li>
             <li>
-              <img src="./images/girl_2.jpg" alt="" />
+              <img src="images/boy_6.jpg" alt="" />
             </li>
             <li>
-              <img src="./images/girl_3.jpg" alt="" />
+              <img src="images/girl_2.jpg" alt="" />
             </li>
             <li>
-              <img src="./images/girl_4.jpg" alt="" />
+              <img src="images/girl_3.jpg" alt="" />
             </li>
             <li>
-              <img src="./images/girl_5.jpg" alt="" />
+              <img src="images/girl_4.jpg" alt="" />
             </li>
             <li>
-              <img src="./images/girl_6.jpg" alt="" />
+              <img src="images/girl_5.jpg" alt="" />
+            </li>
+            <li>
+              <img src="images/girl_6.jpg" alt="" />
             </li>
           </ul>
         </div>
         <div class="footer">
-          <a href="javascript:; void 0">进入聊天室 >></a>
+          <a href="javascript:; void 0" id="loginBtn">登陆进入聊天室 >></a>
         </div>
       </div>
-      <div class="chat-list">
+      <div class="chat-list" id="chatList" style="display: none;">
         <div class="list-left">
           <div class="my-self">
             <div class="img">
-              <img src="./images/girl_2.jpg" alt="" />
+              <img class='my-photo' src="./images/girl_2.jpg" alt="" />
             </div>
-            <p>名称是五大啦</p>
+            <p class="my-username">名称是五大啦</p>
           </div>
           <div class="title">
             <h2>用户列表</h2>
@@ -120,8 +120,9 @@
           <div class="title">
             多人聊天室(100)
           </div>
-          <div class="users">
-            <span class="broadcast">某某某家人了群聊</span>
+          <div class="users" id="users">
+            <!-- <span class="broadcast">某某某家人了群聊</span> -->
+            <!--
             <div class="other-user">
               <div class="img">
                 <img src="./images/girl_2.jpg" alt="" />
@@ -140,6 +141,7 @@
                 <img src="./images/girl_3.jpg" alt="" />
               </div>
             </div>
+            -->
           </div>
           <div class="message-box">
             <ol class="menu-list">
@@ -165,5 +167,8 @@
         </div>
       </div>
     </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>

@@ -71,9 +71,10 @@ p {
 }
 .main .login-box .body ul {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
+  padding: 25px 0;
 }
 .main .login-box .body ul li {
   width: 120px;
