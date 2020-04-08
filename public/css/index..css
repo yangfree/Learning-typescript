@@ -165,54 +165,52 @@ p {
   color: #999;
 }
 .main .chat-list .list-right .users {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
   border: 1px dashed #ccc;
-  /* background-color: #f5f5f5; */
-  padding: 40px 15px 15px;
+  padding: 0 10px;
   height: 225px;
   overflow-x: hidden;
   overflow-y: scroll;
 }
 
 .main .chat-list .list-right .users .broadcast {
-  position: absolute;
-  top: 0;
   text-align: center;
   width: 100%;
-  line-height: 40px;
   color: #999;
+  padding: 5px 0;
 }
 
-.main .chat-list .list-right .users .my-user,
-.main .chat-list .list-right .users .other-user {
-  max-width: 49%;
+.main .chat-list .list-right .users .message-content .img {
+  width: 40px;
+  height: 40px;
   overflow: hidden;
-  display: flex;
 }
-.main .chat-list .list-right .users .my-user .img {
-  /* flex: 1; */
-  margin-left: 10px;
+.chat-list .list-right .users .message-content .img img {
+  width: 100%;
+  height: 100%;
 }
-.main .chat-list .list-right .users .other-user .img {
-  /* flex: 1; */
-  margin-right: 10px;
+.chat-list .list-right .users .message-content .my-user {
+  text-align: right;
 }
-
-.main .chat-list .list-right .users .my-user .word,
-.main .chat-list .list-right .users .other-user .word {
-  word-wrap: break-word;
-  word-break: break-all;
-  width: calc(100% - 40px);
+.chat-list .list-right .users .message-content .other-user .word,
+.chat-list .list-right .users .message-content .my-user .word {
+  display: inline-block;
   background-color: skyblue;
-  padding: 10px;
-  height: max-content;
+  vertical-align: 15px;
+  border-radius: 3px;
+  padding: 5px 10px;
   color: #fff;
-  border-radius: 5px;
+  max-width: 60%;
 }
-.main .chat-list .list-right .users .other-user {
-  margin-top: 40px;
+.chat-list .list-right .users .message-content .other-user .word img,
+.chat-list .list-right .users .message-content .my-user .word img {
+  width: 80px;
+  height: 80px;
+}
+.chat-list .list-right .users .message-content .my-user .img {
+  display: inline-block;
+}
+.chat-list .list-right .users .message-content .other-user .img {
+  display: inline-block;
 }
 .main .chat-list .list-right .message-box {
   position: relative;
