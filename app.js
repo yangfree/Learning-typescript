@@ -1,3 +1,4 @@
+const path = require("path");
 const app = require("express")();
 const server = require("http").Server(app);
 const io = require("socket.io")(server);
@@ -9,10 +10,10 @@ server.listen(port, () => {
   console.log(`Server runing in http://localhost:${port}.`);
 });
 
-app.use(require("express").static("public"));
+app.use(require("express").static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
-  res.redirect("index.html");
+  res.send(path.join(__dirname, "index.html"));
 });
 
 io.on("connection", (socket) => {
