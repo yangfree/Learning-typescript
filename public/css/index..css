@@ -191,15 +191,19 @@ p {
 .chat-list .list-right .users .message-content .my-user {
   text-align: right;
 }
-.chat-list .list-right .users .message-content .other-user .word,
-.chat-list .list-right .users .message-content .my-user .word {
+.chat-list .list-right .users .message-content .my-user .word, 
+.chat-list .list-right .users .message-content .other-user .word {
   display: inline-block;
+  padding: 1px 10px;
+  max-width: 60%;
+}
+.chat-list .list-right .users .message-content .my-user .word {
   background-color: skyblue;
   vertical-align: 15px;
-  border-radius: 3px;
-  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: normal;
   color: #fff;
-  max-width: 60%;
+  padding: 5px 8px;
 }
 .chat-list .list-right .users .message-content .other-user .word img,
 .chat-list .list-right .users .message-content .my-user .word img {
@@ -211,6 +215,20 @@ p {
 }
 .chat-list .list-right .users .message-content .other-user .img {
   display: inline-block;
+}
+.chat-list .list-right .users .message-content .other-user .word .username {
+  margin-bottom: 5px;
+  color: #4b4b4b;
+  font-weight: bold;
+}
+.chat-list .list-right .users .message-content .other-user .word .userwords {
+  background-color: skyblue;
+  margin-left: 5px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 3px;
 }
 .main .chat-list .list-right .message-box {
   position: relative;

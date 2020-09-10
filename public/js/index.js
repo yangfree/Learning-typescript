@@ -107,8 +107,12 @@ socket.on("receiveMsg", (data) => {
                 <img src="${data.avatar}" alt="" />
               </div>
               <div class="word">
-                ${data.username} | 
-                ${data.msg}
+                <div class="username">
+                  ${data.username}
+                </div>
+                <div class="userwords">
+                   ${data.msg}
+                </div>
               </div>
             </div>
             </div>
